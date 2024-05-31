@@ -1,6 +1,7 @@
 
 SELECT documentable_id, COUNT(*) as document_count
 FROM documents
+WHERE documentable_id IS NOT NULL
 GROUP BY documentable_id
 HAVING COUNT(*) > 300
 
